@@ -1,0 +1,41 @@
+@import '../../../../styles/colors.scss';
+
+.navbar{
+    height: 75px;
+    background-color: $bgLight;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-logo{
+        display: block;
+        color: none;
+        text-decoration: none;
+
+        img{
+            height: 45px;
+            width: 45px;
+        }
+    }
+
+    .nav-links{
+        margin: 0;
+    }
+    .nav-link{
+        list-style-type: none;
+        display: inline-block;
+        padding: 0 .5rem;
+        
+        a{
+            color: $white;
+            text-decoration: none;
+            transition: .5s all;
+
+            &:hover{
+                color: orangered;
+            }
+        }
+
+    }
+}

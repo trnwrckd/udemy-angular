@@ -1,0 +1,10 @@
+@import '../../../../styles/colors';
+
+footer{
+    background-color: $bgLight;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 1rem;
+}

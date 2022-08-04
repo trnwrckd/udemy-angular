@@ -1,9 +1,19 @@
 // Normalize.css
 @import './styles/init-css';
+@import './styles/colors';
 // import fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 // import primeflex
 @import '~primeflex/primeflex.css';
+
 body{
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: $bg;
+    color: $white;
+}
+
+.container{
+ padding: 0 2.5%;   
 }
