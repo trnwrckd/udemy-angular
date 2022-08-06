@@ -8,6 +8,7 @@
     color: #999;
     background: #000;
     position: relative;
+    overflow: hidden;
 
     .slide{
         position: relative;
@@ -35,6 +36,7 @@
         }
         .movie{
             position: absolute;
+            width: 40%;
             top: 5rem;
             left: 5rem;
 
