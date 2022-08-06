@@ -8,6 +8,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { MoviesComponent } from './components/pages/movies/movies.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    MoviesComponent
+    MoviesComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
