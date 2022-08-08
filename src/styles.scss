@@ -16,9 +16,6 @@ body{
     color: $white;
 }
 
-.container{
- padding: 0 2.5%;   
-}
 
 .app-icon {
     font-family: 'Material Icons';
@@ -44,4 +41,9 @@ body{
 
     /* Support for IE. */
     font-feature-settings: 'liga';
+}
+
+.container{
+    margin: .5rem;
+    padding: .5rem;
 }

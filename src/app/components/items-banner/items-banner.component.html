@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>{{ bannerTitle }}</h1>
+  <div class="grid">
+    <div class="col-6 md:col-3 lg:col-2" *ngFor="let item of items">
+      <item [item]="item"></item>
+    </div>
+  </div>
+</div>

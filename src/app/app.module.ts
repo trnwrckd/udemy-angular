@@ -10,6 +10,8 @@ import { MoviesComponent } from './components/pages/movies/movies.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SliderComponent } from './components/slider/slider.component';
+import { ItemsBannerComponent } from './components/items-banner/items-banner.component';
+import { ItemComponent } from './components/item/item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SliderComponent } from './components/slider/slider.component';
     FooterComponent,
     HomeComponent,
     MoviesComponent,
-    SliderComponent
+    SliderComponent,
+    ItemsBannerComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,

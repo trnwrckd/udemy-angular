@@ -23,8 +23,11 @@ export class SliderComponent implements OnInit {
 
   ngOnInit(): void {
     setInterval(()=>{
-      this.slideIndex++;
-    },2000)
+      if(this.slideIndex === this.movies.length-1)
+        this.slideIndex = 0;
+      else this.slideIndex++;
+    },5000)
+
   }
 
 }
