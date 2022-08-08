@@ -17,14 +17,14 @@ export class HomeComponent implements OnInit {
   constructor( private moviesService : MoviesService) { }
 
   ngOnInit(): void {
-    this.moviesService.getMovies('popular').subscribe((res : any)=>{
-      this.popularMovies = res.results;
+    this.moviesService.getMovies('popular').subscribe((res)=>{
+      this.popularMovies = res;
     })
-    this.moviesService.getMovies('upcoming').subscribe((res : any)=>{
-      this.upcomingMovies = res.results;
+    this.moviesService.getMovies('upcoming').subscribe((res)=>{
+      this.upcomingMovies = res;
     })
-    this.moviesService.getMovies('top_rated').subscribe((res : any)=>{
-      this.topRatedMovies = res.results;
+    this.moviesService.getMovies('top_rated').subscribe((res)=>{
+      this.topRatedMovies = res;
     })
   }
 

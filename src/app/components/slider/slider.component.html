@@ -2,10 +2,7 @@
   <ng-container *ngFor="let movie of movies; let i = index">
     <div class="slide" *ngIf="i === slideIndex" @slide>
       <div class="slide-bg">
-        <img
-          [src]="'https://images.tmdb.org/t/p/original/' + movie.backdrop_path"
-          alt=""
-        />
+        <img [src]="imageSize.lg + movie.backdrop_path" alt="" />
       </div>
       <div class="movie">
         <h2 class="movie-title">{{ movie.title }}</h2>

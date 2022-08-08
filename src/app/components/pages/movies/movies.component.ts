@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
+import { MoviesService } from '../../../services/movies.service'
+import { Movie } from '../../../models/movie';
 
 @Component({
   selector: 'app-movies',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
 
-  constructor() { }
+  @Input() movies : Movie[] = [];
+  constructor( private movieService : MoviesService) { }
 
-  ngOnInit(): void {
+  getPagedMovies(pageNumber : number = 1){
+    this.movieService.searchMovies(pageNumber).subscribe(movies =>{
+      this.movies = movies
+    })
   }
 
+  ngOnInit(): void {
+    this.getPagedMovies()
+  }
+
+  paginate(event : any){
+    this.getPagedMovies(event.page + 1);
+  }
 }
