@@ -17,18 +17,21 @@ import { IMAGESIZE } from '../../helpers/imageSize';
 export class SliderComponent implements OnInit {
 
   @Input() movies  : Movie[] = []
+  @Input() isBanner  : boolean = false;
+
   slideIndex : number = 0
   readonly imageSize = IMAGESIZE
 
   constructor() { }
 
   ngOnInit(): void {
-    setInterval(()=>{
+    if(!this.isBanner){
+      setInterval(()=>{
       if(this.slideIndex === this.movies.length-1)
         this.slideIndex = 0;
       else this.slideIndex++;
     },5000)
-
+    }
   }
 
 }
