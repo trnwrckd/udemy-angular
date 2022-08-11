@@ -1,0 +1,13 @@
+@import '../../../../styles//mixins';
+
+.genre-container{
+    @include flexCenter(row);
+    background-color: orange;
+    cursor: pointer;
+    transition: .5s all;
+
+    &:hover{
+        background-color: rgb(255, 174, 68);
+        color: black;
+    }
+}

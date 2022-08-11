@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { MovieDTO } from '../models/movieDTO';
 import { of, switchMap } from 'rxjs';
-import { Movie, MovieCasts, MovieImages, VideoDTO } from '../models/movie';
+import { Movie, MovieDTO, MovieCasts, MovieImages, VideoDTO, GenreDTO } from '../models/models';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +18,13 @@ export class MoviesService {
     .pipe(switchMap(res =>{
       return of(res.results.slice( 0 , count))
     }));
+  }
+
+  getMoviesByGenres( id : number , page : number){
+    return this.http.get<MovieDTO>(`${this.baseUrl}/discover/movie?with_genres=${id}&page=${page}&api_key=${this.apiKey}`)
+    .pipe(switchMap(res =>{
+      return of(res.results);
+    }))
   }
 
   searchMovies( page : number ){
@@ -46,6 +52,15 @@ export class MoviesService {
   getCasts(id : number){
     return this.http.get<MovieCasts>(`${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`) 
   }
+
+  // genre
+  getMovieGenres(){
+    return this.http.get<GenreDTO>(`${this.baseUrl}/genre/movie/list?api_key=${this.apiKey}`)
+    .pipe(switchMap(res =>{
+      return of(res.genres);
+    }))
+  }
+
 
   
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { first } from 'rxjs';
 import { IMAGESIZE } from '../../../helpers/imageSize';
-import { Movie, MovieCasts, MovieImages, MovieVideo } from '../../../models/movie';
+import { Movie, MovieCasts, MovieImages, MovieVideo } from '../../../models/models';
 import { MoviesService } from '../../../services/movies.service';
 
 @Component({

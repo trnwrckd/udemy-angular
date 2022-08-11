@@ -19,10 +19,22 @@ export interface Movie {
     vote_count : number
 }
 
+export interface MovieDTO {
+    page : number ,
+    results : Movie[]
+    total_results : number ,
+    total_pages : number 
+}
+
 export interface Genre{
     id : number,
     name : string 
-} 
+}
+
+export interface GenreDTO{
+    genres : Genre[]
+    // id: number,
+}
 
 export interface VideoDTO{
     id: number , 
@@ -36,7 +48,7 @@ export interface MovieVideo{
 
 export interface MovieImages{
     backdrops : {
-        file_path : string
+    file_path : string
     }[]
 }
 

@@ -1,0 +1,11 @@
+<ng-container *ngIf="genres">
+  <div class="container">
+    <div class="grid">
+      <div class="col-6 md:col-3 lg:col-4" *ngFor="let genre of genres">
+        <div class="genre-container" [routerLink]="'/movies/genres/' + genre.id">
+          <h1>{{ genre.name }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
